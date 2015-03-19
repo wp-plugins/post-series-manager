@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Post Series Manager\n"
+"POT-Creation-Date: 2015-03-18 20:40-0500\n"
+"PO-Revision-Date: 2015-03-18 20:44-0500\n"
+"Last-Translator: \n"
+"Language-Team: Highforge <devteam@highforge.com>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../post-series-manager.php:72 ../post-series-manager.php:74
+#: ../post-series-manager.php:75
+msgid "Post Series"
+msgstr "Post serie"
+
+#: ../post-series-manager.php:76
+msgid "All Post Series"
+msgstr "Alle post series"
+
+#: ../post-series-manager.php:77
+msgid "Edit Post Series"
+msgstr "Post serie wijzigen"
+
+#: ../post-series-manager.php:78
+msgid "View Post Series"
+msgstr "Post serie bekijken"
+
+#: ../post-series-manager.php:79
+msgid "Update Post Series"
+msgstr "Post serie bijwerken"
+
+#: ../post-series-manager.php:80
+msgid "Add New Post Series"
+msgstr "Nieuwe post serie toevoegen"
+
+#: ../post-series-manager.php:81
+msgid "New Post Series Name"
+msgstr "Nieuwe post serie naam"
+
+#: ../post-series-manager.php:82
+msgid "Search Post Series"
+msgstr "Zoek post serie"
+
+#: ../post-series-manager.php:83
+msgid "Popular Post Series"
+msgstr "Populaire post series"
+
+#: ../post-series-manager.php:84
+msgid "Separate post series with commas"
+msgstr "Scheid post series met komma's"
+
+#: ../post-series-manager.php:85
+msgid "Add or remove post series"
+msgstr "Voeg post series toe, of verwijder ze"
+
+#: ../post-series-manager.php:86
+msgid "Choose from most used post series"
+msgstr "Kies een veel gebruikte post serie"
+
+#: ../post-series-manager.php:87
+msgid "No post series found"
+msgstr "Geen post series gevonden"
+
+#: ../post-series-manager.php:114
+msgid "This post is part of the series"
+msgstr "Deze post behoort tot de reeks"
+
+#: ../post-series-manager.php:143
+msgid "Other posts in this series:"
+msgstr "Andere posts in deze serie:"
+
+#: ../post-series-manager.php:166
+msgid " (Current)"
+msgstr "(Huidige)"
+
+#: ../post-series-manager.php:186
+msgid "Continue reading this series:"
+msgstr "Lees verder in deze reeks:"
+
+#~ msgid "Read the previous post in ths series:"
+#~ msgstr "Lees de vorige post in deze reeks:"
