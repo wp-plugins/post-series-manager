@@ -2,7 +2,7 @@
 Contributors: adamsoucie, cheffheid
 Tags: post
 Requires at least: 3.8
-Tested up to: 4.1.1
+Tested up to: 4.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -48,6 +48,9 @@ The shortcodes are simple and have no additional parameters to use. The shortcod
 3. Adding a post to a series is as simple as adding a tag to it.
 
 == Changelog ==
+
+= 1.0.1 =
+* Changed unordered list to an ordered one, because semantics
 
 = 1.0 =
 * First release.

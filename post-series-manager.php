@@ -3,14 +3,14 @@
 /**
 *
 * @link              http://cheffism.com
-* @since             1.0.0
+* @since             1.0.1
 * @package           Post_Series_Manager
 *
 * @wordpress-plugin
 * Plugin Name:       Post Series Manager
 * Plugin URI:        http://cheffism.com/post-series-manager/
 * Description:       This plugin will help you manage and display post series more easily. You'll be able to create/assign series and display other posts in the series.
-* Version:           1.0.0
+* Version:           1.0.1
 * Author:            Jeffrey de Wit, Adam Soucie
 * Author URI:        http://cheffism.com/
 * License:           GPL-2.0+
@@ -140,7 +140,7 @@ class Post_Series_Manager {
     public function get_series_list_HTML( $series )
     {
         $current_post_id = get_the_ID();
-        $series_list_HTML = '<p>' . __('Other posts in this series:') . '</p><ul class="post-series-manager-post-list">';
+        $series_list_HTML = '<p>' . __('Other posts in this series:') . '</p><ol class="post-series-manager-post-list">';
 
         $args = array(
             'tax_query' => array(
@@ -171,7 +171,7 @@ class Post_Series_Manager {
            $series_list_HTML .= sprintf($list_item, $title_markup);
        }
 
-       $series_list_HTML .= '</ul>';
+       $series_list_HTML .= '</ol>';
 
        return $series_list_HTML;
     }
