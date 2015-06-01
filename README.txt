@@ -41,6 +41,20 @@ The shortcodes are simple and have no additional parameters to use. The shortcod
 * [post_series_block] - this is normally added before the content
 * [post_series_nav] - this is normally added after the content
 
+= Can I filter stuff? =
+
+A number of filters have been included, and more are to follow.
+
+The filters that are included (subject to change):
+    // Filters "This post of part of the series: " text
+    post-series-manager-series-text
+
+    // Filters the " (Current)" text
+    post-series-manager-current-text
+
+    // Filters the "Continue reading this series:" text
+    post-series-manager-next-text 
+
 == Screenshots ==
 
 1. An example of a list of posts in a series, automatically placed at the top of a post.
@@ -48,6 +62,10 @@ The shortcodes are simple and have no additional parameters to use. The shortcod
 3. Adding a post to a series is as simple as adding a tag to it.
 
 == Changelog ==
+
+= 1.0.2 =
+* Fixed a small, but nasty, bug with a div not getting closed properly.
+* Added some filters.
 
 = 1.0.1 =
 * Changed unordered list to an ordered one, because semantics

@@ -3,14 +3,14 @@
 /**
 *
 * @link              http://cheffism.com
-* @since             1.0.1
+* @since             1.0.0
 * @package           Post_Series_Manager
 *
 * @wordpress-plugin
 * Plugin Name:       Post Series Manager
 * Plugin URI:        http://cheffism.com/post-series-manager/
 * Description:       This plugin will help you manage and display post series more easily. You'll be able to create/assign series and display other posts in the series.
-* Version:           1.0.1
+* Version:           1.0.2
 * Author:            Jeffrey de Wit, Adam Soucie
 * Author URI:        http://cheffism.com/
 * License:           GPL-2.0+
@@ -112,8 +112,10 @@ class Post_Series_Manager {
         if ( $all_series ) {
             foreach( $all_series as $series ) {
                $series_text = __('This post is part of the series');
-               $series_block = '<div class="post-series-manager-block"><p>%s %s</p>%s';
+               $series_block = '<div class="post-series-manager-block"><p>%s %s</p>%s</div>';
                $series_link = sprintf('<a href="%s">%s</a>', get_term_link($series), $series->name);
+
+               apply_filters( 'post-series-manager-series-text', $series_text );
 
                if( is_single() )
                {
@@ -140,6 +142,10 @@ class Post_Series_Manager {
     public function get_series_list_HTML( $series )
     {
         $current_post_id = get_the_ID();
+        $current_indicator = __(' (Current)');
+
+        apply_filters( 'post-series-manager-current-text', $current_indicator );
+
         $series_list_HTML = '<p>' . __('Other posts in this series:') . '</p><ol class="post-series-manager-post-list">';
 
         $args = array(
@@ -160,13 +166,16 @@ class Post_Series_Manager {
             $post_title 	= get_the_title( $series_post->ID );
             $post_permalink	= get_permalink( $series_post->ID );
 
+
             $list_item = "<li class='post-series-manager-post'>%s</li>";
 
             if ( $series_post->ID === $current_post_id ) {
-               $title_markup = $post_title . __(' (Current)');
+               $title_markup = $post_title . $current_indicator;
            } else {
                $title_markup = "<a href='$post_permalink'>" . $post_title . "</a>";
            }
+
+
 
            $series_list_HTML .= sprintf($list_item, $title_markup);
        }
@@ -186,6 +195,8 @@ class Post_Series_Manager {
             $series_text = __('Continue reading this series:');
             $series_nav = '<div class="post-series-nav"><p>%s<br /> %s</p></div>';
             $next = get_next_post_link('%link', '%title', true, NULL, 'post-series' );
+
+            apply_filters( 'post-series-manager-next-text', $series_text );
 
             if ( $next && is_single() ) {
                $shortcode_html = sprintf($series_nav, $series_text, $next);
